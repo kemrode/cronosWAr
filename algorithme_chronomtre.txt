@@ -1,0 +1,50 @@
+ALGORITHMEcronosWarTemps
+VARIABLES
+    arrMarch : BOOLEEN
+    tpsJ1 : ENTIER
+    tpsJ2 : ENTIER
+    tpsTotal : ENTIER
+
+DEBUT
+
+    arrMarch <- FAUX
+    tpsJ1 <- 0
+    tpsJ2 <- 0
+
+    SAISIR tpsTotal
+    tpsJ1 <- tpsTotal/2
+    tpsJ2 <- tpsTotal/2
+
+    SI arrMarch VRAI ET tpsJ1>0 ALORS 
+        POUR cpt ALLANT DE tpsJ1 A 0 PAR PAS DE 1seconde FAIRE
+            AFFICHAGE tpsJ1 <- tpsJ1 - cpt
+
+            SI tpsJ1 = 0 ALORS
+                AFFICHAGE tpsJ1
+                RETOURNER arrMarch FAUX
+            FINSI
+
+            SI arrMarch FAUX ALORS
+                AFFICHAGE tpsJ1
+                RETOURNER arrMarch FAUX
+            FINSI
+        FINPOUR
+    FINSI
+
+    SI arrMarch VRAI ET tpsJ2>0 ALORS 
+        POUR cpt ALLANT DE tpsJ2 A 0 PAR PAS DE 1seconde FAIRE
+            AFFICHAGE tpsJ2 <- tpsJ2 - cpt
+
+            SI tpsJ2 = 0 ALORS
+                AFFICHAGE tpsJ2
+                RETOURNER arrMarch FAUX
+            FINSI
+
+            SI arrMarch FAUX ALORS
+                AFFICHAGE tpsJ2
+                RETOURNER arrMarch FAUX
+            FINSI
+        FINPOUR
+    FINSI
+
+FIN

@@ -1,0 +1,14 @@
+FONCTIONchangementTour
+VARIABLES
+    bouton : BOOLEEN
+    tour : ENTIER
+
+DEBUT
+    tour <-1
+    bouton <- FAUX
+
+    SI bouton VRAI ALORS
+        tour <- tour++
+        bouton <- FAUX
+    FINSI
+FIN
